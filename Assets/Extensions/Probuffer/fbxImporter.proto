@@ -1,0 +1,72 @@
+// See README.txt for information and build instructions.
+
+package fbxImporter;
+
+
+message Vector2
+{
+	required float x = 1;
+	required float y = 2;	
+}
+
+message Vector3
+{
+	required float x = 1;
+	required float y = 2;	
+	required float z = 3;	
+}
+
+message UPolygon
+{
+	repeated Vector3 coordinates = 1;
+	repeated Vector2 texUV = 2;
+	repeated Vector3 normal = 3;
+}
+
+message UPolygons
+{
+	repeated UPolygon polygon = 1;
+}
+
+message UGeometricTransform
+{
+	required Vector3 translation = 1; 
+	required Vector3 rotation = 2;
+	required Vector3 scaling = 3;	
+}
+
+message UMaterialIndex
+{
+	optional string mapping = 1;
+	optional string referenceMode = 2;	
+	repeated sint32 indexList = 3;
+}
+
+
+
+message UTextureInfo
+{
+	required sint32 materialId = 1;
+	optional string diffusePath = 2;
+	optional Vector2 diffuvScale = 3;
+	optional Vector2 diffvTranslation = 4;
+	optional bool diffswapUV = 5;
+}
+
+message UMeshNode
+{
+	required string name = 1;
+	optional UPolygons Polygons = 2;
+	optional UGeometricTransform geoTras = 3;
+	required sint32 childrenNums = 4;
+	repeated UMeshNode children = 5;
+	optional UMaterialIndex materialList = 6;
+	repeated UTextureInfo textureList = 7;
+}
+
+message USceneNode
+{
+	required sint32 meshNums = 1;
+	repeated UMeshNode meshList = 2;
+}
+

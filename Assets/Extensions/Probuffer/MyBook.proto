@@ -1,0 +1,14 @@
+package MyBook;
+
+message MyClass
+{
+	required string grade = 1;
+	repeated Person PersonList = 2;
+}
+
+message Person
+{
+	required string name = 1;
+	required bool sex = 2;
+	optional fixed32 age =3;
+}
