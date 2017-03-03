@@ -1,0 +1,143 @@
+Log：logger Start, time: 2/21/2017 11:10:40 AM, version: 5.3.3f1.
+Windows 7 Service Pack 1 (6.1.7601) 64bit Intel(R) Xeon(R) CPU E3-1231 v3 @ 3.40GHz 8 memorySize:16351 Graphics: NVIDIA GeForce GTX 960 vendor: NVIDIA memorySize: 1969 Direct3D 11.0 [level 11.0]
+
+Log：2017-02-21 11:10:42
+
+Log：2017-02-21 11:10:44
+
+Error：2017-02-21 11:10:45
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:10:46
+
+Log：2017-02-21 11:10:48
+
+Error：2017-02-21 11:10:49
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:10:50
+
+Log：2017-02-21 11:10:52
+
+Error：2017-02-21 11:10:53
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:10:54
+
+Log：2017-02-21 11:10:56
+
+Error：2017-02-21 11:10:57
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:10:58
+
+Log：2017-02-21 11:11:00
+
+Error：2017-02-21 11:11:01
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:02
+
+Log：2017-02-21 11:11:04
+
+Error：2017-02-21 11:11:06
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:06
+
+Log：2017-02-21 11:11:08
+
+Error：2017-02-21 11:11:10
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:10
+
+Log：2017-02-21 11:11:12
+
+Error：2017-02-21 11:11:14
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:14
+
+Log：2017-02-21 11:11:17
+
+Error：2017-02-21 11:11:18
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:19
+
+Log：2017-02-21 11:11:21
+
+Error：2017-02-21 11:11:22
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:23
+
+Log：2017-02-21 11:11:25
+
+Log：2017-02-21 11:11:27
+
+Error：2017-02-21 11:11:27
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:29
+
+Log：2017-02-21 11:11:31
+
+Error：2017-02-21 11:11:31
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:33
+
+Log：2017-02-21 11:11:35
+
+Error：2017-02-21 11:11:35
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:37
+
+Log：2017-02-21 11:11:39
+
+Error：2017-02-21 11:11:39
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:41
+
+Log：2017-02-21 11:11:43
+
+Error：2017-02-21 11:11:44
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:45
+
+Log：2017-02-21 11:11:47
+
+Error：2017-02-21 11:11:48
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:49
+
+Log：2017-02-21 11:11:51
+
+Error：2017-02-21 11:11:52
+UnityEngine.Debug:LogError(Object)
+LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+
+Log：2017-02-21 11:11:53
+
