@@ -1,19 +1,15 @@
-Log：logger Start, time: 2/22/2017 3:04:47 PM, version: 5.3.3f1.
+Log：logger Start, time: 3/13/2017 1:57:26 PM, version: 5.3.3f1.
 Windows 7 Service Pack 1 (6.1.7601) 64bit Intel(R) Xeon(R) CPU E3-1231 v3 @ 3.40GHz 8 memorySize:16351 Graphics: NVIDIA GeForce GTX 960 vendor: NVIDIA memorySize: 1969 Direct3D 11.0 [level 11.0]
 
-Log：2017-02-22 03:04:49
+Log：2017-03-13 01:57:28
 
-Log：2017-02-22 03:04:51
+Log：2017-03-13 01:57:30
 
-Error：2017-02-22 03:04:51
+Error：2017-03-13 01:57:30
 UnityEngine.Debug:LogError(Object)
 LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
 
-Log：2017-02-22 03:04:53
+Log：2017-03-13 01:57:32
 
-Log：2017-02-22 03:04:55
-
-Error：2017-02-22 03:04:56
-UnityEngine.Debug:LogError(Object)
-LoggerMono:Update() (at Assets/Src/LoggerMono.cs:77)
+Log：2017-03-13 01:57:34
 
