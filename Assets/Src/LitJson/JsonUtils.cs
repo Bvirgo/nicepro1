@@ -6,6 +6,28 @@ using System.Collections.Generic;
 using System;
 public static class JsonUtils
 {
+    /// <summary>
+    /// 空Json数组
+    /// </summary>
+    public static JsonData EmptyJsonArray
+    {
+        get
+        {
+            return JsonMapper.ToObject("[]");
+        }
+    }
+
+    /// <summary>
+    /// 空Json对象
+    /// </summary>
+    public static JsonData EmptyJsonObject
+    {
+        get
+        {
+            return JsonMapper.ToObject("{}");
+        }
+    }
+
     /// <summary>读取文件中的json</summary>
     public static JsonData ReadJsonFile(string path)
     {

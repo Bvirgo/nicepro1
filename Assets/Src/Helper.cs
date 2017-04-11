@@ -5,6 +5,8 @@ using System.IO;
 using System.Drawing;
 using System.Windows.Forms;
 using System;
+using System.Text;
+
 public static class Helper
 {
     #region Txt To Image
@@ -192,12 +194,12 @@ public static class Helper
     #endregion
 
     #region 文件保存调试信息
-    public static void SaveInfo(string _strMsg, string _strFileName = "TempData",string _strDir="D:", bool _bAppend = false)
+    public static void SaveInfo(string _strMsg, string _strFileName = "CityEditorInfo", string _strType = ".txt", bool _bAppend = false)
     {
-        string strPath = _strDir+"\\" + _strFileName + ".txt";
+        string strPath = UnityEngine.Application.streamingAssetsPath + "\\" + _strFileName + _strType;
         byte[] myByte = System.Text.Encoding.UTF8.GetBytes(_strMsg);
         //using (FileStream fsWrite = new FileStream(@"D:\CityEditorInfo.txt", FileMode.Append))
-        using (FileStream fsWrite = new FileStream(strPath, _bAppend ? FileMode.Append : FileMode.OpenOrCreate))
+        using (FileStream fsWrite = new FileStream(strPath, _bAppend ? FileMode.Append : FileMode.Create))
         {
             fsWrite.Write(myByte, 0, myByte.Length);
         };
@@ -283,6 +285,32 @@ public static class Helper
 
         //如果需要可以返回截图  
         //return mTexture;  
+    }
+    #endregion
+
+    #region Unicode转中文
+    public static string UnicodeToGB(string text)
+    {
+        System.Text.RegularExpressions.MatchCollection mc = System.Text.RegularExpressions.Regex.Matches(text, "\\\\u([\\w]{4})");
+        if (mc != null && mc.Count > 0)
+        {
+            foreach (System.Text.RegularExpressions.Match m2 in mc)
+            {
+                string v = m2.Value;
+                string word = v.Substring(2);
+                byte[] codes = new byte[2];
+                int code = Convert.ToInt32(word.Substring(0, 2), 16);
+                int code2 = Convert.ToInt32(word.Substring(2), 16);
+                codes[0] = (byte)code2;
+                codes[1] = (byte)code;
+                text = text.Replace(v, Encoding.Unicode.GetString(codes));
+            }
+        }
+        else
+        {
+            text = "Unicode Error";
+        }
+        return text;
     }
     #endregion
 }
