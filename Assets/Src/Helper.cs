@@ -132,6 +132,8 @@ public static class Helper
     }
     #endregion
 
+    #region Int
+
     /// <summary>
     /// 之后可以和其他方法测试效率
     /// </summary>
@@ -149,6 +151,10 @@ public static class Helper
             return false;
         }
     }
+    #endregion
+
+    #region Vector3
+
     /// <summary>
     /// 等比缩放Vector3
     /// </summary>
@@ -159,6 +165,7 @@ public static class Helper
     {
         return new Vector3(tar.x * multi, tar.y * multi, tar.z * multi);
     }
+    #endregion
 
     #region 导入文件统一入口
     private const string FILEFILTER = "Fbx(*.fbx),xml(*.xml)|*.fbx;*.xml;*.assetbundle|*.txt";
@@ -312,6 +319,154 @@ public static class Helper
         }
         return text;
     }
+    #endregion
+
+    #region File
+    public static string GetStandardPath(string path)
+    {
+        int loopNum = 20;
+        path = path.Replace(@"\", @"/");
+        while (path.IndexOf(@"//") != -1)
+        {
+            path = path.Replace(@"//", @"/");
+            loopNum--;
+            if (loopNum < 0)
+            {
+                return path;
+            }
+        }
+        return path;
+    }
+
+    /// <summary>获取文件名后缀</summary>
+    public static string GetFilePostfix(string fileName)
+    {
+        if (fileName == null)
+            return null;
+        string res;
+        if (fileName.IndexOf(".") == -1)
+            res = "";
+        else
+        {
+            string[] ss = fileName.Split(new char[1] { '.' });
+            res = ss[ss.Length - 1];
+        }
+        return res;
+    }
+
+    public static string GetFolderPath(string path, bool fullPath = true)
+    {
+        path = GetStandardPath(path);
+        if (fullPath)//获取全路径
+        {
+            if (path.LastIndexOf(@"/") == path.Length - 1)
+                return GetFolderPath(path.Substring(0, path.Length - 1));
+            else
+                return path.Substring(0, path.LastIndexOf(@"/") + 1);
+        }
+        else//获取父级文件夹名
+        {
+            string[] strArr = path.Split('/');
+
+            if (path.LastIndexOf(@"/") == path.Length - 1)
+                return strArr[strArr.Length - 2];
+            else
+                return strArr[strArr.Length - 1];
+        }
+    }
+
+    public static string GetParentFolderPath(string path, bool fullPath = true)
+    {
+        path = GetStandardPath(path);
+        if (fullPath)//获取全路径
+        {
+            if (path.LastIndexOf(@"/") == path.Length - 1)
+                return GetFolderPath(path.Substring(0, path.Length - 1));
+            else
+                return path.Substring(0, path.LastIndexOf(@"/") + 1);
+        }
+        else//获取父级文件夹名
+        {
+            string[] strArr = path.Split('/');
+            return strArr[strArr.Length - 2];
+        }
+    }
+
+    public static string GetFileName(string path, bool needPostfix = false)
+    {
+        path = GetStandardPath(path);
+        string fileFolderPath = path.Substring(0, path.LastIndexOf(@"/") + 1);
+
+        string fileName = path.Substring(path.LastIndexOf("/") + 1, path.Length - fileFolderPath.Length);
+        if (needPostfix)
+            return fileName;
+        else
+            return fileName.Substring(0, fileName.LastIndexOf("."));
+    }
+
+    public static bool IsPic(string fileName)
+    {
+        string postFix = Helper.GetFilePostfix(fileName);
+        return postFix == "png"
+            || postFix == "PNG"
+            || postFix == "jpg"
+            || postFix == "JPG"
+            || postFix == "jpeg"
+            || postFix == "JPEG";
+    }
+    #endregion
+
+    #region Debug
+    public static void Debug(string _strTips, byte _bLevel = 1)
+    {
+        switch (_bLevel)
+        {
+            case 1:
+                UnityEngine.Debug.Log(_strTips);
+                break;
+
+            case 2:
+                UnityEngine.Debug.LogWarning(_strTips);
+                break;
+
+            case 3:
+                UnityEngine.Debug.LogError(_strTips);
+                break;
+
+            default:
+                break;
+        }
+    }
+    #endregion
+
+    #region Vector4
+
+    public static Vector4  GetV4(string _str)
+    {
+        Vector4 vRes = Vector4.zero;
+        string[] pStr = _str.Split(',');
+        if (pStr.Length != 4)
+        {
+            return vRes;
+        }
+
+        try
+        {
+            float x = float.Parse(pStr[0]);
+            float y = float.Parse(pStr[1]);
+            float z = float.Parse(pStr[2]);
+            float w = float.Parse(pStr[3]);
+            vRes = new Vector4(x, y, z, w);
+        }
+        catch (Exception)
+        {
+            Helper.Debug("解析float字符串失败！", 2);
+            return vRes;
+        }
+
+        return vRes;
+    }
+
     #endregion
 }
 

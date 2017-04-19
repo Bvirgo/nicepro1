@@ -65,6 +65,35 @@ public class MyWWWMgr : MonoBehaviour
         www.Dispose();
     }
 
+ 
+    /// <summary>
+    /// 获取WWW资源
+    /// </summary>
+    /// <param name="_strPath"></param>
+    /// <param name="_sCb"></param>
+    /// <param name="_fCb"></param>
+    public void GetResByWWW(string _strPath,Action<WWW> _sCb,Action<string> _fCb)
+    {
+        WWW w = new WWW(_strPath);
+
+        StartCoroutine(GetResByWWW(w, _sCb, _fCb));
+    }
+
+    /// <returns></returns>
+    private IEnumerator GetResByWWW(WWW _www, Action<WWW> _sCb , Action<string> _fCb)
+    {
+        yield return _www;
+        if (_www.error != null)
+        {
+            _fCb(_www.error);
+        }
+        else if (_www.isDone)
+        {
+            _sCb(_www);
+        }
+
+    }
+
     /// <summary>
     /// www善后
     /// </summary>
