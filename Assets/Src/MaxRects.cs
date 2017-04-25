@@ -32,6 +32,7 @@ public class MaxRects : MonoBehaviour
 
     private int counter = 0;
 
+    // 每个图集---源图片列表
     private Dictionary<string, List<rectData>> histDic = new Dictionary<string, List<rectData>>();
     private Dictionary<KeyCode, int> inputReactDic;
 
@@ -218,6 +219,8 @@ public class MaxRects : MonoBehaviour
         }
         List<rectData> _surplus = new List<rectData>();
         List<rectData> mItemp = new List<rectData>();
+
+        // 图集组合优化： 一个图集，固定size，源图片中选择最佳组合，最大化利用图集size
         MaxRectsBinPack temp = new MaxRectsBinPack(1024, 1024, false);
         temp.insert2(rc, new List<Rect>(), inputReactDic[InputKey]);
 

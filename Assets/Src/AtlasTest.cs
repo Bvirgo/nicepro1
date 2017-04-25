@@ -167,6 +167,7 @@ public class AtlasTest : MonoBehaviour
 
         Helper.Debug(string.Format("创建图片：{0}，H：{1}，W：{2}", _item.name, hMax, wMax));
 
+        // 获取制定Rect区域的像素值
         Color[] pColor = txAtlas.GetPixels((int)_item.rect.x, (int)_item.rect.y, (int)_item.rect.width, (int)_item.rect.height);
 
         Texture2D txImg = new Texture2D(wMax, hMax);
