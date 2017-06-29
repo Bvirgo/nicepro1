@@ -74,14 +74,19 @@ public class JsonReTest : MonoBehaviour
 
         Helper.SaveInfo(strUTF8, "JsonDataToJson");
 
-
+        JsonData jd11 = JsonUtils.EmptyJsonObject;
+        jd11["women"] = "ooo";
+        jd11["man"] = "xxx";
         // Unicode编码
         JsonData JD1 = new JsonData();
         for (int i = 0; i < m_pStr.Length; i++)
         {
             JsonData JD = JsonUtils.EmptyJsonObject;
+
             JD["name"] = m_pStr[i];
             JD["id"] = i + 1;
+            JD["info"] = JDArray;
+            JD["data"] = jd11;
             JD1.Add(JD);
         }
 
