@@ -209,14 +209,10 @@ public class Platform
                 return "Android";
             case BuildTarget.iOS:
                 return "IOS";
-            case BuildTarget.WebPlayer:
-                return "WebPlayer";
             case BuildTarget.StandaloneWindows:
             case BuildTarget.StandaloneWindows64:
                 return "Windows";
-            case BuildTarget.StandaloneOSXIntel:
-            case BuildTarget.StandaloneOSXIntel64:
-            case BuildTarget.StandaloneOSXUniversal:
+            case BuildTarget.StandaloneOSX:
                 return "OSX";
             default:
                 return null;

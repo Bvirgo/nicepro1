@@ -1,8 +1,50 @@
 fileFormatVersion: 2
 guid: bc1b6b59c938e5341b060b8a37553e03
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 22
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: Pivot
+    100004: X_Rotate
+    100006: X_Scale
+    100008: X_Translate
+    100010: Y_Rotate
+    100012: Y_Scale
+    100014: Y_Translate
+    100016: Z_Rotate
+    100018: Z_Scale
+    100020: Z_Translate
+    400000: //RootNode
+    400002: Pivot
+    400004: X_Rotate
+    400006: X_Scale
+    400008: X_Translate
+    400010: Y_Rotate
+    400012: Y_Scale
+    400014: Y_Translate
+    400016: Z_Rotate
+    400018: Z_Scale
+    400020: Z_Translate
+    2300000: Pivot
+    2300002: X_Rotate
+    2300004: X_Scale
+    2300006: X_Translate
+    2300008: Y_Rotate
+    2300010: Y_Scale
+    2300012: Y_Translate
+    2300014: Z_Rotate
+    2300016: Z_Scale
+    2300018: Z_Translate
+    3300000: Pivot
+    3300002: X_Rotate
+    3300004: X_Scale
+    3300006: X_Translate
+    3300008: Y_Rotate
+    3300010: Y_Scale
+    3300012: Y_Translate
+    3300014: Z_Rotate
+    3300016: Z_Scale
+    3300018: Z_Translate
     4300000: Pivot
     4300002: Z_Scale
     4300004: Z_Rotate
@@ -13,26 +55,53 @@ ModelImporter:
     4300014: Y_Rotate
     4300016: X_Scale
     4300018: Y_Scale
+    11100000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gizmo_Pivot_Mat
+    second: {fileID: 2100000, guid: c9785f18fb4bba444886000d43f86017, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gizmo_X_Mat
+    second: {fileID: 2100000, guid: 030cdd5b1d475f1439221686e00d026d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gizmo_Y_Mat
+    second: {fileID: 2100000, guid: 16bcff05fd97dbf46a73614ea542c292, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gizmo_Z_Mat
+    second: {fileID: 2100000, guid: 1857e58b98e63b84fb257f8010e002fa, type: 2}
   materials:
     importMaterials: 1
     materialName: 3
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
+    resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -40,13 +109,18 @@ ModelImporter:
     globalScale: 0.01
     meshCompression: 0
     addColliders: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -56,9 +130,11 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 4
+    normalCalculationMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -69,7 +145,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 1
   humanoidOversampling: 1

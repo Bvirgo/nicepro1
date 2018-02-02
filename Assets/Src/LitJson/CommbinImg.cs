@@ -4,6 +4,9 @@ using System.IO;
 using System.Drawing;
 using UnityEngine.UI;
 
+/// <summary>
+/// 在一些场景中，需要把多个图片，合（拼）成为一张 
+/// </summary>
 public class CommbinImg : MonoBehaviour {
 
     public UnityEngine.UI.Image img;
@@ -22,11 +25,15 @@ public class CommbinImg : MonoBehaviour {
 	
 	}
 
+    /// <summary>
+    /// 加载folderPath 下的所有图片，指定合成方向，合成存放于C盘下
+    /// </summary>
     public void OnCombinImg()
     {
         const string folderPath = "D:\\Pictures";
         var images = new DirectoryInfo(folderPath).GetFiles("*.png", SearchOption.TopDirectoryOnly);
 
+        
         CombineImages(images, "C:/FinalImage_H.png",ImageMergeOrientation.Horizontal);
         CombineImages(images, "C:/FinalImage_V.png", ImageMergeOrientation.Vertical);  
     }

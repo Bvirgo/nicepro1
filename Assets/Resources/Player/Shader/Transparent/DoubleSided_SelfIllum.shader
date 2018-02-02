@@ -1,4 +1,6 @@
-﻿Shader "MyShader/Transparent/DoubleSided_SelfIllum" 
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "MyShader/Transparent/DoubleSided_SelfIllum" 
 {
     Properties {
         _MainTex ("Base (RGB)", 2D) = "white" {}
@@ -40,7 +42,7 @@
             VertexOutput vert (VertexInput v) {
                 VertexOutput o = (VertexOutput)0;
                 o.uv0 = v.texcoord0;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+                o.pos = UnityObjectToClipPos(v.vertex);
                 UNITY_TRANSFER_FOG(o,o.pos);
                 return o;
             }

@@ -112,7 +112,7 @@ using System;
             cnt = CreateArc(m_pZColor, m_fRadius, m_pMesh, m_arrMats[2]);
             m_pVtNums.Add(cnt);
 
-            m_pMesh.Optimize();
+            ;
 
             m_pMesh.normals = m_pMesh.vertices;
             m_pMesh.uv = new Vector2[m_pMesh.vertices.Length];
@@ -155,7 +155,7 @@ using System;
             //m_arrMats[(int)m_eCurrentAxis]
             CreateArc(new Color(0,0.5f,0.5f,0.5f), m_fRadius * 0.9f, m_pDynamicArcMesh, Matrix4x4.identity, angle * Mathf.Deg2Rad, true);
 
-            m_pDynamicArcMesh.Optimize();
+            ;
 
             m_pDynamicArcMesh.normals = m_pDynamicArcMesh.vertices;
             m_pDynamicArcMesh.uv = new Vector2[m_pDynamicArcMesh.vertices.Length];

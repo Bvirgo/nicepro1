@@ -1,4 +1,6 @@
-﻿Shader "RotateShader"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "RotateShader"
 {
 	SubShader
 	{
@@ -37,7 +39,7 @@
 			{
 				v2f o;
 
-				o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
+				o.pos = UnityObjectToClipPos(v.vertex);
 				o.color = v.color;
 				/*float3 pos = v.vertex.xyz + float3(0.01,0.01,0.0);
 				pos.y = 0;

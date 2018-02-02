@@ -81,7 +81,7 @@ public class CTest : MonoBehaviour {
         Debug.Log("Event:"+e.type);
         switch(e.type)
         {
-            case EventType.mouseDown:
+            case EventType.MouseDown:
                 Debug.Log("MuseDown");
                 break;
             case EventType.DragUpdated:

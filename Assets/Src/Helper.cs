@@ -229,7 +229,7 @@ public static class Helper
     /// <param name="mFileName">M file name.</param>  
     public static void CaptureByUnity(string mFileName)
     {
-        UnityEngine.Application.CaptureScreenshot(mFileName, 0);
+        ScreenCapture.CaptureScreenshot(mFileName, 0);
     }
 
     /// <summary>  
